@@ -1,0 +1,92 @@
+body {
+    margin: 0px;
+    padding: 0;
+    min-height: 100vh;
+    background-color: rgb(255, 249, 240);
+    position: relative;
+}
+#header {
+    height: 37px;
+    width: 98%;
+    padding: 1vw;
+    background-color: rgb(240, 172, 116);
+    color: rgb(252, 240, 231);
+    font-size: xx-large;
+    font-family: Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+}
+#navbar {
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(255, 216, 165);
+    display:flex;
+}
+#navbar a {
+    padding: 12px;
+    background-color: rgb(253, 204, 140);
+    border: 3px solid rgb(219, 168, 110);
+    font-size: 20px;
+    font-family: Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+    color: black;
+    text-decoration: none;
+}
+#navbar a:hover {
+    background-color: rgb(206, 157, 92);
+    border-color: rgb(194, 147, 94);
+}
+#navbar #current {
+    background-color: rgb(243, 178, 92);
+    border-color: rgb(214, 153, 84);
+}
+#navbar #current:hover {
+    background-color: rgb(209, 150, 72);
+    border-color: rgb(190, 132, 65);
+}
+#content {
+    display: flex;
+    justify-content: center;
+}
+#content div {
+    max-width: 800px;
+    padding: 20px;
+    background-color: white;
+    overflow: auto;
+}
+#content div div {
+    padding: 0px;
+    background-color: unset;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#content table { border: 3px solid black; }
+#spacer {/*For Footer*/
+    height: 100px;
+}
+#footer {
+    height: 90px;
+    width: 100%;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(63, 62, 61);
+    color: white;
+}
+#footer div {
+    padding: 15px;
+}
+/*Incase phone or something very thin:*/
+@media all and (max-width: 400px)
+{
+    #navbar {
+        flex-direction: column;
+    }
+    #spacer {
+        height: 150px;
+    }
+    #footer {
+        height: 150px;
+    }
+}
